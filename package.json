@@ -1,0 +1,22 @@
+{
+  "name": "amqplib-auto-recovery",
+  "description": "Automatic connection recovery for amqplib",
+  "version": "0.1.0",
+  "author": "Stanley Shyiko <stanley.shyiko@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyiko/amqplib-auto-recovery"
+  },
+  "main": "./src/amqplib-auto-recovery.js",
+  "keywords": [
+    "amqplib",
+    "amqp"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "backoff": "^2.5.0"
+  }
+}
