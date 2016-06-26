@@ -79,7 +79,7 @@ module.exports = function withAutoRecovery(amqp, o = {}) {
                 let channelClosed = false;
                 ch.on('close', () => {
                   channelClosed = true;
-                  // do not close the connection is channel was deliberately
+                  // do not close the connection if channel was deliberately
                   // closed by the client
                   channelClosedByClient || closeConnection();
                 });
