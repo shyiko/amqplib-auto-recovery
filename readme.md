@@ -63,4 +63,4 @@ might come in handy in situations like:
 
 ## License
 
-[MIT License](https://github.com/shyiko/amqplib-auto-recovery/blob/master/mit.license)
+[MIT License](https://opensource.org/licenses/MIT)
