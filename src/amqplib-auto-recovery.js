@@ -21,10 +21,10 @@ module.exports = function withAutoRecovery(amqp, o = {}) {
   const isErrorUnrecoverable = o.isErrorUnrecoverable || (() => false);
   return Object.create(amqp, {
     connect: {
-      value: function connect(url, connectCallback) {
+      value: function connect(url, opts, connectCallback) {
         let activeConnection = null;
         const spec = backoff.call((cb) => {
-            amqp.connect(url, (err, con) => {
+            amqp.connect(url, opts, (err, con) => {
               if (err) {
                 connectCallback(err);
                 cb(!isErrorUnrecoverable(err) ? err : null);
